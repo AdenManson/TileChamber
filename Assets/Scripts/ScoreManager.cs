@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
-       // LoadData();
+      //  LoadData();
 
         boardManager = GameObject.Find("Board").GetComponent<BoardManager>();
 
@@ -72,5 +72,7 @@ public class ScoreManager : MonoBehaviour
         int hasBomb = PlayerPrefs.GetInt("HasBomb");
         if (hasBomb == 1)
             multiDestroyButton.setEnabled(true);
+
+        if (level == 0) level = 1;
     }
 }
